@@ -27,6 +27,7 @@ import (
 	"github.com/xenolf/lego/providers/dns/linode"
 	"github.com/xenolf/lego/providers/dns/namecheap"
 	"github.com/xenolf/lego/providers/dns/namedotcom"
+	"github.com/xenolf/lego/providers/dns/nicru"
 	"github.com/xenolf/lego/providers/dns/ns1"
 	"github.com/xenolf/lego/providers/dns/otc"
 	"github.com/xenolf/lego/providers/dns/ovh"
@@ -86,8 +87,13 @@ func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) 
 		provider, err = acme.NewDNSProviderManual()
 	case "namecheap":
 		provider, err = namecheap.NewDNSProvider()
+<<<<<<< HEAD
 	case "namedotcom":
 		provider, err = namedotcom.NewDNSProvider()
+=======
+	case "nicru":
+		provider, err = nicru.NewDNSProvider()
+>>>>>>> af47278... Support for DNS Provider: nic.ru
 	case "rackspace":
 		provider, err = rackspace.NewDNSProvider()
 	case "route53":
