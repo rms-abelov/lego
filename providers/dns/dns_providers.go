@@ -87,13 +87,10 @@ func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) 
 		provider, err = acme.NewDNSProviderManual()
 	case "namecheap":
 		provider, err = namecheap.NewDNSProvider()
-<<<<<<< HEAD
 	case "namedotcom":
 		provider, err = namedotcom.NewDNSProvider()
-=======
 	case "nicru":
 		provider, err = nicru.NewDNSProvider()
->>>>>>> af47278... Support for DNS Provider: nic.ru
 	case "rackspace":
 		provider, err = rackspace.NewDNSProvider()
 	case "route53":
